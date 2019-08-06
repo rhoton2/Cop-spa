@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cop-spa": {
+    "CopApp-SPA": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cop-spa",
+            "outputPath": "dist/CopApp-SPA",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,7 +25,10 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/alertifyjs/build/alertify.min.js"
+              
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -58,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cop-spa:build"
+            "browserTarget": "CopApp-SPA:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cop-spa:build:production"
+              "browserTarget": "CopApp-SPA:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cop-spa:build"
+            "browserTarget": "CopApp-SPA:build"
           }
         },
         "test": {
@@ -103,7 +106,7 @@
         }
       }
     },
-    "cop-spa-e2e": {
+    "CopApp-SPA-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "cop-spa:serve"
+            "devServerTarget": "CopApp-SPA:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "cop-spa:serve:production"
+              "devServerTarget": "CopApp-SPA:serve:production"
             }
           }
         },
@@ -132,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "cop-spa"
+  "defaultProject": "CopApp-SPA"
 }
