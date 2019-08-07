@@ -11,6 +11,7 @@ import { MemberListResolver } from './_resolvers/member-list.resolver';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { MemberEditResolver } from './_resolvers/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
+import { RegisterNewUnitComponent } from './units/unit-register/unit-register.component';
 
 export const appRoutes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -20,6 +21,8 @@ export const appRoutes: Routes = [
         canActivate: [AuthGuard],
         children: [
             {path: 'units', component: UnitListComponent,
+            resolve: {units: UnitListResolver}},
+            {path: 'register', component: RegisterNewUnitComponent,
             resolve: {units: UnitListResolver}},
             {path: 'members', component: MemberListComponent,
                 resolve: {users: MemberListResolver}},

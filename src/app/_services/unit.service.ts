@@ -29,4 +29,8 @@ export class UnitService {
   updateUnit(id: number, unit: Unit) {
     return this.http.put(this.baseUrl + 'users/' + id, unit);
   }
+
+  register(model: any) {
+    return this.http.post(this.baseUrl + 'units/register', model);
+  }
 }

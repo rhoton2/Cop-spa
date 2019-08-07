@@ -1,19 +1,19 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand" [routerLink]="['/home']">Cop App</a>
-
-  
+      <a class="navbar-brand" [routerLink]="['/home']">
+          <img src="../../assets/120 Infantry Brigade SSI Dagger.png" alt="image">
+        </a>  
       
-    <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
+    <ul *ngIf="loggedIn()" class="navbar-nav mr-auto"> 
+        <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/register']">Register Unit</a>
+          </li>     
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/members']">Users</a>
+        <a class="nav-link" [routerLink]="['/units']">Units List</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/units']">Unit Info</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/lists']">Validations</a>
-      </li>
+          <a class="nav-link" [routerLink]="['/members']">Users</a>
+        </li>
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/messages']">Dashboard</a>
       </li>

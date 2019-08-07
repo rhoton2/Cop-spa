@@ -2,21 +2,33 @@
   
   
     <div style="margin:50px;">
-      <div class="alert alert-info"><b>Datatable View</b></div>
+      <div class="alert alert-info"><b>All Units</b></div>
       <div class="table-responsive">
         <table class="table">
           <thead>
             <tr>
-              <th>Unit</th>
-              <th>Type</th>
               <th>Id</th>
+              <th>UnitName</th>              
+              <th>Address</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Zip</th>
+              <th>Zip4</th>
+              <th>UpdatedDate</th>
+
+
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let unit of units">
-              <td>{{unit.unitName}}</td>
-              <td>{{unit.unitType}}</td>
               <td>{{unit.id}}</td>
+              <td>{{unit.unitName + ' ' + unit.branch + ' ' + unit.element }}</td>             
+              <td>{{unit.address}}</td>
+              <td>{{unit.city}}</td>    
+              <td>{{unit.state}}</td>
+              <td>{{unit.zip}}</td>
+              <td>{{unit.zip4}}</td>
+              <td>{{unit.updatedDate | date: 'shortDate' }}</td>
             </tr>
           </tbody>
         </table>

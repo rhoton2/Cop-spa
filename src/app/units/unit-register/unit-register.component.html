@@ -1,0 +1,119 @@
+<div class="container">
+<form #registerForm="ngForm" (ngSubmit)="register()">
+    <h2 class="text-center text-primary">Register New Unit</h2>
+    <hr>  
+    <div>
+        <tabset>
+          <tab heading="Basic Unit Data" id="tab1">
+              <div class="col-md-12" >          
+                <div class="card">                    
+                    <div class="card-body">
+                      <h5 class="card-title"></h5>   
+                      <div class="row">                   
+                        <div class="form-group; col-md-4">
+                          <label for="inputUnit">Unit</label>
+                          <input type="text" id="inputUnit" class="form-control" required name="unitName" [(ngModel)]="model.unitName" placeholder="UnitName">
+                        </div>
+                      
+                        <div class="form-group col-md-3">
+                            <label for="inputBranch">Branch</label>
+                          <input type="text" id="inputBranch" class="form-control" required name="branch" [(ngModel)]="model.branch" placeholder="Branch">
+                        </div>
+                    
+                        <div class="form-group col-md-3">
+                            <label for="inputElement">Element</label>
+                            <input type="text" id="inputElement" class="form-control" required name="element" [(ngModel)]="model.element" placeholder="Element">
+                        </div>                  
+                    </div>
+                    <div class="row">    
+                        <div class="form-group col-md-12">
+                            <label for="inputAddress">Address</label>
+                            <input type="text" id="inputAddress" class="form-control" required name="address" [(ngModel)]="model.address" placeholder="Address">
+                        </div>
+                    </div>
+                    <div class="row"> 
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input type="text" id="inputCity" class="form-control" required name="branch" [(ngModel)]="model.city" placeholder="City">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputState">State</label>
+                            <input type="text" id="inputState" class="form-control" required name="state" [(ngModel)]="model.state" placeholder="State">
+                        </div>
+                            
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Zip</label>
+                          <input type="text" id="inputZip" class="form-control" required name="zip" [(ngModel)]="model.zip" placeholder="Zip Code">
+                        </div>
+                    
+                        <div class="form-group col-md-2">
+                            <label for="inputZip4">4 digit</label>
+                            <input type="text" id="inputZip4" class="form-control" required name="zip4" [(ngModel)]="model.zip4" placeholder="4 digit">
+                        </div>        
+                  </div>
+            </div>
+                </div>
+            </div> 
+              
+              
+              </tab>         
+           <!-- Manning -->
+          <tab heading="Manning">          
+              <div class="col-md-12" >          
+                  <div class="card">                    
+                      <div class="card-body">
+                  <h5 class="card-title"></h5>   
+                  <div class="row">                   
+                    <div class="form-group; col-md-2">
+                      <label for="inputRequiredStrenth">Required Strength</label>
+                      <input type="text" id="inputRequiredStrenth" class="form-control" required name="required" [(ngModel)]="model.requiredStrenth" placeholder="Required Strenth">
+                    </div>  
+                    <div class="form-group col-md-2">
+                        <label for="inputAssigned">Assigned Strength</label>
+                     <input type="text" id="inputAssigned" class="form-control" required name="assigned" [(ngModel)]="model.assigned" placeholder="Assigned">
+                    </div> 
+                    <div class="form-group col-md-2">
+                        <label for="inputAvailable">Available Strength</label>
+                        <input type="text" id="inputAvailable" class="form-control" required name="available" [(ngModel)]="model.available" placeholder="available">
+                    </div>  
+                    <div class="form-group col-md-2">
+                        <label for="inputDmosq">DMOSQ</label>
+                        <input type="text" id="inputDmosq" class="form-control" required name="dmosq" [(ngModel)]="model.dmosq" placeholder="dmosq">
+                    </div>
+                  </div> 
+            <div class="row">
+               
+                  <div class="form-group col-md-3">
+                    <strong>Unit Assigned Strength: {{model.assigned / model.requiredStrenth  | percent: '2.2-2' }}</strong>
+                  </div>  
+                  <div class="form-group col-md-3">
+                      <strong>Unit Available Strength: {{model.available / model.assigned | percent: '2.2-2' }}</strong>
+                  </div>           
+                  <div class="form-group col-md-3">
+                      <strong>Unit DMOSQ Available : {{model.dmosq / model.available | percent: '2.2-2' }}</strong>
+                  </div>         
+              </div>                 
+                 
+            </div>  
+        </div>
+        </div>  
+          </tab>
+          <tab heading="Mission Requirements">Mission Requirements           </tab>
+          <tab heading="Training">Training</tab>
+          <tab heading="Dates">Dates</tab>
+          <tab heading="Mission Requirements">Basic content 1</tab>
+          <tab heading="Last">
+              <div class="form-group text-center">
+                  <button class="btn btn-success" type="submit">Register</button>
+                  <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
+                </div>
+          </tab>
+         
+        </tabset>
+      </div>
+    
+    
+  </form>
+</div>
+  
+  

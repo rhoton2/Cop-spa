@@ -17,7 +17,7 @@ export class UnitListComponent implements OnInit {
   units: Unit[];
 
   constructor(private unitService: UnitService, private alertify: AlertifyService,
-    private route: ActivatedRoute) { }
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.data.subscribe(data => {
