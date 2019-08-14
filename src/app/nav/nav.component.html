@@ -4,11 +4,11 @@
           <img src="../../assets/120 Infantry Brigade SSI Dagger.png" alt="image">
         </a>  
       
-    <ul *ngIf="loggedIn()" class="navbar-nav mr-auto"> 
+    <ul *ngIf="!loggedIn()" class="navbar-nav mr-auto"> 
         <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" [routerLink]="['/register']">Register Unit</a>
+            <a class="nav-link" [routerLink]="['/unit/new']">Add Unit</a>
           </li>     
-      <li class="nav-item" routerLinkActive="active">
+      <!-- <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/units']">Units List</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
@@ -16,10 +16,10 @@
         </li>
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/messages']">Dashboard</a>
-      </li>
+      </li> -->
     </ul>
 
-    <div *ngIf="loggedIn()" class="dropdown" dropdown>
+    <div *ngIf="!loggedIn()" class="dropdown" dropdown>
       <span class="mr-1">
         <img src="#" alt="">
       </span>

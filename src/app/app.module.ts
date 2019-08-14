@@ -6,6 +6,7 @@ import { BsDropdownModule, TabsModule } from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
 import { JwtModule } from '@auth0/angular-jwt';
 import { NgxGalleryModule } from 'ngx-gallery';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -32,6 +33,7 @@ import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import {TimeAgoPipe} from 'time-ago-pipe';
 import { UnitService } from './_services/unit.service';
 import { RegisterNewUnitComponent } from './units/unit-register/unit-register.component';
+import { MaterialModule } from './material';
 
 
 
@@ -60,6 +62,8 @@ export function tokenGetter() {
    imports: [
       BrowserModule,
       HttpClientModule,
+      BrowserAnimationsModule,
+      MaterialModule,
       FormsModule,
       BsDropdownModule.forRoot(),
       TabsModule.forRoot(),
