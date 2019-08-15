@@ -10,5 +10,20 @@ export interface Unit {
   zip4: string;
   updatedDate: Date;
   isDeleted: boolean;
+  unitContacts: UnitContacts[];
+}
+
+export interface UnitContacts {
+  id: number;
+  position: string;
+  rank: string;
+  lastName: string;
+  firstName: string;
+  middleName: string;
+  email: string;
+  mobile: string;
+  work: string;
+  lastUpdated: Date;
+
 }
 
