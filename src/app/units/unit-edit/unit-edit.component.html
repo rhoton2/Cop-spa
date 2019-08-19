@@ -4,8 +4,7 @@
         <hr>  
         <div>
           <tabset>
-            <tab heading="Basic Unit Data" id="tab1">
-                <div class="col-md-12" >          
+            <tab heading="Basic Unit Data" id="tab1">       
                   <div class="card">                    
                       <div class="card-body">
                         <h5 class="card-title"></h5>   
@@ -49,15 +48,52 @@
                         </div>        
                       </div>
                     </div>
-                  </div>
-                </div>   
+                  </div>  
               </tab>
               
               
                <!-- Manning -->
-              <tab heading="Manning">          
-
+              <tab heading="Contacts">
+                  <div class="card">                    
+                      <div class="card-body">
+                        <h5 class="card-title"></h5>   
+                        <div class="row">
+                            <table *ngIf="model">
+                                <thead>
+                                <tr>
+                                  <th>Id</th>
+                                  <th>Position</th>
+                                  <th>Rank</th>
+                                  <th>LastName</th>
+                                  <th>FirstName</th>
+                                  <th>MiddleName/th>
+                                  <th>Email</th>
+                                  <th>Mobile</th>
+                                  <th>Work</th>
+                                  <th>LastUpdated</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr *ngFor="let b of model.unitContacts; let i=index">
+                                  <!-- <pre>{{b | json}}</pre> -->
+                                  <th>{{b.id}}</th>
+                                  <th>{{b.position}}</th>
+                                  <th>{{b.rank}}</th>
+                                  <th>{{b.lastName}}</th>
+                                  <th>{{b.firstName}}</th>
+                                  <th>{{b.middleName}}</th>
+                                  <th>{{b.email}}</th>
+                                  <th>{{b.mobile}}</th>
+                                  <th>{{b.work}}</th>
+                                  <th>{{b.lastUpdated}}</th>
+                                  
+                                </tbody>
+                              </table>
+                        </div>
+                      </div>
+                  </div>
               </tab>
+
               <tab heading="Mission Requirements">Mission Requirements</tab>
               <tab heading="Training">Training</tab>
               <tab heading="Dates">Dates</tab>
