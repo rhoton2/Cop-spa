@@ -32,8 +32,10 @@ import { MemberEditResolver } from './_resolvers/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import {TimeAgoPipe} from 'time-ago-pipe';
 import { UnitService } from './_services/unit.service';
-import { RegisterNewUnitComponent } from './units/unit-register/unit-register.component';
+// import { RegisterNewUnitComponent } from './units/unit-register/unit-register.component';
 import { MaterialModule } from './material';
+import { UnitSearchComponent } from './units/unit-search/unit-search.component';
+import { UnitEditComponent } from './units/unit-edit/unit-edit.component';
 
 
 
@@ -49,6 +51,8 @@ export function tokenGetter() {
       HomeComponent,
       RegisterComponent,
       MemberListComponent,
+      UnitSearchComponent,
+      UnitEditComponent,
       UnitListComponent,
       ListsComponent,
       MessagesComponent,
@@ -56,7 +60,7 @@ export function tokenGetter() {
       MemberDetailComponent,
       MemberEditComponent,
       UnitListComponent,
-      RegisterNewUnitComponent,
+      // RegisterNewUnitComponent,
       TimeAgoPipe,
    ],
    imports: [

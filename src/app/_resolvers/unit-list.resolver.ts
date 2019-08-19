@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators';
 @Injectable()
 export class UnitListResolver implements Resolve<Unit[]> {
     constructor(private unitService: UnitService, private router: Router,
-        private alertify: AlertifyService) {}
+                private alertify: AlertifyService) {}
 
     resolve(route: ActivatedRouteSnapshot): Observable<Unit[]> {
         return this.unitService.getUnits().pipe(

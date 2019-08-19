@@ -1,4 +1,4 @@
-export interface Unit {
+export class Unit {
   id: number;
   unitName: string;
   branch: string;
@@ -10,10 +10,10 @@ export interface Unit {
   zip4: string;
   updatedDate: Date;
   isDeleted: boolean;
-  unitContacts: UnitContacts[];
+  unitContacts: UnitContacts;
 }
 
-export interface UnitContacts {
+export class UnitContacts {
   id: number;
   position: string;
   rank: string;

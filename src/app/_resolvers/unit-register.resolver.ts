@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Unit} from '../_models/unit';
+import {Unit, UnitContacts} from '../_models/unit';
 import {Resolve, Router, ActivatedRouteSnapshot} from '@angular/router';
 import { UnitService } from '../_services/unit.service';
 import { AlertifyService } from '../_services/alertify.service';
@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators';
 @Injectable()
 export class RegisterNewUnitResolver implements Resolve<Unit[]> {
     constructor(private unitService: UnitService, private router: Router,
-        private alertify: AlertifyService) {}
+                private alertify: AlertifyService) {}
 
     resolve(route: ActivatedRouteSnapshot): Observable<Unit[]> {
         return this.unitService.getUnits().pipe(

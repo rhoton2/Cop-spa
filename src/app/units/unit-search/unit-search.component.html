@@ -1,0 +1,63 @@
+<h2>Search</h2>
+<form>
+  <input type="search" name="query" [(ngModel)]="query" (keyup.enter)="search()">
+  <button type="button" (click)="search()">Search</button>
+</form>
+<!-- <pre>{{ searchResults | json}}</pre> -->
+
+<!-- <pre>{{ searchResults | json }}</pre> -->
+
+<!-- <pre>{{searchResults.unitContacts | json}}</pre> -->
+
+<table *ngIf="searchResults">
+  <thead>
+  <tr>
+    <th>Unit</th>
+    <th>Branch</th>
+    <th>Element</th>
+    <th>Address</th>
+    <th>Contacts</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let unit of searchResults; let i=index">
+    <td>{{unit.unitName}}</td>
+    <td>{{unit.branch}}</td>
+    <td>{{unit.element}}</td>
+    <td>{{unit.address}},<br>
+      {{unit.city}} {{unit.state}}, {{unit.zip}}-{{unit.zip4}}   
+    </td>  
+  </tbody>
+</table>
+<!-- <pre>{{searchResults | json}}</pre> -->
+<table *ngIf="searchResults">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Position</th>
+      <th>Rank</th>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>MiddleName/th>
+      <th>Email</th>
+      <th>Mobile</th>
+      <th>Work</th>
+      <th>LastUpdated</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let unit of searchResults; let i=index">
+    <tr *ngFor="let b of unit.unitContacts; let i=index">
+      <!-- <pre>{{b | json}}</pre> -->
+      <th>{{b.id}}</th>
+      <th>{{b.position}}</th>
+      <th>{{b.rank}}</th>
+      <th>{{b.lastName}}</th>
+      <th>{{b.firstName}}</th>
+      <th>{{b.middleName}}</th>
+      <th>{{b.email}}</th>
+      <th>{{b.mobile}}</th>
+      <th>{{b.work}}</th>
+      <th>{{b.lastUpdated}}</th>
+      
+    </tbody>
+  </table>

@@ -11,7 +11,9 @@ import { HomeComponent } from './home/home.component';
 // import { MemberEditComponent } from './members/member-edit/member-edit.component';
 // import { MemberEditResolver } from './_resolvers/member-edit.resolver';
 // import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
-import { RegisterNewUnitComponent } from './units/unit-register/unit-register.component';
+// import { RegisterNewUnitComponent } from './units/unit-register/unit-register.component';
+import { UnitSearchComponent } from './units/unit-search/unit-search.component';
+import { UnitEditComponent } from './units/unit-edit/unit-edit.component';
 
 export const appRoutes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -22,7 +24,10 @@ export const appRoutes: Routes = [
         children: [
             // {path: 'units', component: UnitListComponent,
             // resolve: {units: UnitListResolver}},
-            {path: 'unit/new', component: RegisterNewUnitComponent,}
+            // {path: 'unit/new', component: RegisterNewUnitComponent},
+            {path: 'search', component: UnitSearchComponent},
+            {path: 'unit/edit', component: UnitEditComponent},
+            {path: 'unit/edit/:id', component: UnitEditComponent},
             // resolve: {units: UnitListResolver}},
             // {path: 'members', component: MemberListComponent,
             //     resolve: {users: MemberListResolver}},
