@@ -1,9 +1,11 @@
 
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, ViewChild, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { UnitService } from '../../_services/unit.service';
 import { AlertifyService } from '../../_services/alertify.service';
 import { Unit } from 'src/app/_models/unit';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TabsetComponent } from 'ngx-bootstrap';
+
 
 
 
@@ -21,18 +23,22 @@ export class AppModule { }
 export class UnitEditComponent implements OnInit {
 
   query: string;
-  model: any;
+
   @Input() id: number;
   @Output() cancelRegister = new EventEmitter();
+  @ViewChild('staticTabs', { static: false }) staticTabs: TabsetComponent;
+ 
+  // disableEnable() {
+  //   this.staticTabs.tabs[2].disabled = !this.staticTabs.tabs[2].disabled;
+  // }
 
-
-  unitData: Array<Unit>;
+  model: Array<Unit> = [];
 
   constructor(private unitService: UnitService
             , private alertify: AlertifyService
             , private router: Router
             , private activatedRoute: ActivatedRoute) {}
-
+  
   ngOnInit() {
     this.activatedRoute.params.subscribe(paramsId => {
       this.id = paramsId.id;

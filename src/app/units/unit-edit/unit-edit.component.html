@@ -1,9 +1,9 @@
-<div class="container">
-    <form #registerForm="ngForm" (ngSubmit)="addNewUnit()">
-        <h2 class="text-center text-primary">Register New Unit</h2>
+
+    <div class="container" (ngSubmit)="addNewUnit()">
+        <h2 class="text-center text-primary">Add New Unit</h2>
         <hr>  
         <div>
-          <tabset>
+          <tabset #staticTabs>
             <tab heading="Basic Unit Data" id="tab1">       
                   <div class="card">                    
                       <div class="card-body">
@@ -99,16 +99,13 @@
               <tab heading="Dates">Dates</tab>
               <tab heading="Mission Requirements">Basic content 1</tab>
               <tab heading="Last">
-                <div class="form-group text-center">
+                <!-- <div class="form-group text-center">
                   <button class="btn btn-success" type="submit">Register</button>
                   <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
-                </div>
+                </div> -->
               </tab>
             </tabset>
           </div>
-        
-        
-      </form>
     </div>
       
       

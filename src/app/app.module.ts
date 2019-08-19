@@ -7,7 +7,6 @@ import { RouterModule } from '@angular/router';
 import { JwtModule } from '@auth0/angular-jwt';
 import { NgxGalleryModule } from 'ngx-gallery';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { AuthService } from './_services/auth.service';
@@ -32,7 +31,7 @@ import { MemberEditResolver } from './_resolvers/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import {TimeAgoPipe} from 'time-ago-pipe';
 import { UnitService } from './_services/unit.service';
-// import { RegisterNewUnitComponent } from './units/unit-register/unit-register.component';
+import { RegisterNewUnitComponent } from './units/unit-register/unit-register.component';
 import { MaterialModule } from './material';
 import { UnitSearchComponent } from './units/unit-search/unit-search.component';
 import { UnitEditComponent } from './units/unit-edit/unit-edit.component';
@@ -53,14 +52,14 @@ export function tokenGetter() {
       MemberListComponent,
       UnitSearchComponent,
       UnitEditComponent,
+      RegisterNewUnitComponent,
       UnitListComponent,
       ListsComponent,
       MessagesComponent,
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      UnitListComponent,
-      // RegisterNewUnitComponent,
+      UnitListComponent,      
       TimeAgoPipe,
    ],
    imports: [
