@@ -28,7 +28,10 @@ export class UnitEditComponent implements OnInit {
 
   unitData: Array<Unit>;
 
-  constructor(private unitService: UnitService, private alertify: AlertifyService,private router: Router, private activatedRoute: ActivatedRoute) {}
+  constructor(private unitService: UnitService
+            , private alertify: AlertifyService
+            , private router: Router
+            , private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(paramsId => {
@@ -39,7 +42,7 @@ export class UnitEditComponent implements OnInit {
       return;
   }
 
-      this.getUnit(this.id);
+    this.getUnit(this.id);
   }
 
   search(): void {
