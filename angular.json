@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "CopApp-SPA": {
+    "Cop-SPA": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "CopApp-SPA:serve"
+            "devServerTarget": "Cop-SPA:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "CopApp-SPA:serve:production"
+              "devServerTarget": "Cop-SPA:serve:production"
             }
           }
         },
@@ -135,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "CopApp-SPA"
+  "defaultProject": "Cop-SPA"
 }
