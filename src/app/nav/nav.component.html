@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-primary">
   <div class="container-fluid">
       <a class="navbar-brand" [routerLink]="['/home']">
-          <img src="../../assets/120 Infantry Brigade SSI Dagger.png" alt="image">
+          <img src="../../assets/TrustLeadAdapt.png" alt="image">
         </a>  
       
-    <ul *ngIf="loggedIn()" class="navbar-nav mr-auto"> 
+    <ul *ngIf="!loggedIn()" class="navbar-nav mr-auto"> 
         <li class="nav-item" routerLinkActive="active">
             <a class="nav-link" [routerLink]="['/unit/edit']">Add Unit</a>
           </li>     

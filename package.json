@@ -1,5 +1,5 @@
 {
-  "name": "cop-spa",
+  "name": "copApp-spa",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

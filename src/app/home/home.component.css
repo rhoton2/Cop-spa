@@ -1,0 +1,16 @@
+.left-column
+{
+    width:250px;
+    float:left;
+}
+.right-column
+{
+    width:250px;
+    
+    float:left;
+}
+.center-column
+{
+    width:225px;
+    float:left;
+}

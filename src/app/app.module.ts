@@ -35,6 +35,8 @@ import { RegisterNewUnitComponent } from './units/unit-register/unit-register.co
 import { MaterialModule } from './material';
 import { UnitSearchComponent } from './units/unit-search/unit-search.component';
 import { UnitEditComponent } from './units/unit-edit/unit-edit.component';
+import { DashComponent } from './dash/dash.component';
+
 
 
 
@@ -59,8 +61,9 @@ export function tokenGetter() {
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      UnitListComponent,      
+      UnitListComponent,
       TimeAgoPipe,
+      DashComponent
    ],
    imports: [
       BrowserModule,
@@ -72,13 +75,13 @@ export function tokenGetter() {
       TabsModule.forRoot(),
       RouterModule.forRoot(appRoutes),
       NgxGalleryModule,
-    JwtModule.forRoot({
-      config: {
-        tokenGetter: tokenGetter,
-        whitelistedDomains: ['localhost:5000'],
-        blacklistedRoutes: ['localhost:5000/api/auth']
-      }
-    })
+      JwtModule.forRoot({
+         config: {
+           tokenGetter: tokenGetter,
+           whitelistedDomains: ['localhost:5000'],
+           blacklistedRoutes: ['localhost:5000/api/auth']
+         }
+       })
   ],
   providers: [
       AuthService,

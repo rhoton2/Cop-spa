@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 // import { RegisterNewUnitComponent } from './units/unit-register/unit-register.component';
 import { UnitSearchComponent } from './units/unit-search/unit-search.component';
 import { UnitEditComponent } from './units/unit-edit/unit-edit.component';
+import { DashComponent } from './dash/dash.component';
 
 export const appRoutes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -28,6 +29,7 @@ export const appRoutes: Routes = [
             {path: 'search', component: UnitSearchComponent},
             {path: 'unit/edit', component: UnitEditComponent},
             {path: 'unit/edit/:id', component: UnitEditComponent},
+            {path: 'dash', component: DashComponent},
             // resolve: {units: UnitListResolver}},
             // {path: 'members', component: MemberListComponent,
             //     resolve: {users: MemberListResolver}},
